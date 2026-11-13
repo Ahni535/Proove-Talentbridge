@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Chat | Prove Talentbridge</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">PROVE <span>TALENTBRIDGE</span></a>
+<a href="client-dashboard.html">Dashboard</a>
+</header>
+
+<main class="section">
+<span class="eyebrow">CLIENT MESSAGING</span>
+<h1>Client Chat</h1>
+<p>Discuss project requirements with professionals.</p>
+
+<div class="feature-card">
+<div id="clientChatMessages">
+<p>Your messages will appear here after database integration.</p>
+</div>
+
+<form id="clientChatForm">
+<label for="clientChatInput">Your Message</label>
+<textarea id="clientChatInput" name="message" rows="4" required></textarea>
+<button type="submit">Send Message</button>
+<p id="clientChatStatus" role="status"></p>
+</form>
+</div>
+
+<p>Keep all project communication within Prove Talentbridge.</p>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/chat.js"></script>
+</body>
+</html>

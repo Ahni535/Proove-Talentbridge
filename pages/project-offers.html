@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Offers | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <h1>Project Offers</h1>
+  <p>Review offers sent by clients.</p>
+  <section id="projectOffers">
+    <p>Your available project offers will appear here.</p>
+  </section>
+  <form id="projectOfferResponseForm">
+    <label for="offerReference">Offer Reference</label>
+    <input type="text" id="offerReference" name="offerReference" required>
+    <label for="offerPrice">Your Proposed Price (₦)</label>
+    <input type="number" id="offerPrice" name="price" min="1" required>
+    <label for="offerDeadline">Proposed Completion Date</label>
+    <input type="date" id="offerDeadline" name="deadline" required>
+    <label for="offerDeliverables">Deliverables and Revisions</label>
+    <textarea id="offerDeliverables" name="deliverables" required></textarea>
+    <button type="submit" name="response" value="accept">Submit Proposal</button>
+    <p id="offerResponseMessage" role="status"></p>
+  </form>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/jobs.js"></script>
+</body>
+</html>

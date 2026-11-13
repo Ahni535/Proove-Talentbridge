@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Chat | Prove Talentbridge</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">PROVE <span>TALENTBRIDGE</span></a>
+<a href="professional-dashboard.html">Dashboard</a>
+</header>
+
+<main class="section">
+<span class="eyebrow">PROFESSIONAL MESSAGING</span>
+<h1>Professional Chat</h1>
+<p>Communicate with clients about your projects.</p>
+
+<div class="feature-card">
+<div id="workerChatMessages">
+<p>Your messages will appear here after database integration.</p>
+</div>
+
+<form id="workerChatForm">
+<label for="workerChatInput">Your Message</label>
+<textarea id="workerChatInput" name="message" rows="4" required></textarea>
+<button type="submit">Send Message</button>
+<p id="workerChatStatus" role="status"></p>
+</form>
+</div>
+
+<p>Keep project discussions and agreements within the platform.</p>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <h2>PROVE <span>TALENTBRIDGE</span></h2>
+  <nav><a href="../index.html">Home</a> <a href="client-dashboard.html">Dashboard</a></nav>
+</header>
+<main class="container">
+  <h1>Find the Right Professional</h1>
+  <p>Discover talented people offering services across different industries.</p>
+  <div class="marketplace-search" role="search">
+  <label class="sr-only" for="professionalSearch">Search professionals or services</label>
+  <input type="search" id="professionalSearch" placeholder="Search professionals or services">
+  <label class="sr-only" for="marketplaceCategory">Filter by category</label>
+  <select id="marketplaceCategory">
+    <option value="">All Categories</option>
+    <option>Design</option><option>Video Editing</option>
+    <option>Photo Editing</option><option>Writing</option>
+    <option>Technology</option><option>Marketing</option>
+    <option>Business</option><option>Virtual Assistance</option>
+  </select>
+  </div>
+  <section id="professionalListings" aria-live="polite">
+    <p class="empty-state">Professional listings will appear here.</p>
+  </section>
+  <section class="section">
+    <div class="flex-between flex-wrap">
+      <div>
+        <h2>Recent Opportunities</h2>
+        <p>Browse client requests posted on this device.</p>
+      </div>
+      <a class="btn" href="job-posting.html">Post a Job</a>
+    </div>
+    <div id="recentJobs" class="feature-grid"></div>
+  </section>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Prove Talentbridge</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">PROVE <span>TALENTBRIDGE</span></a>
+<a href="#" data-logout>Logout</a>
+</header>
+
+<main class="section">
+<span class="eyebrow">SUPER ADMINISTRATION</span>
+<h1>Admin Dashboard</h1>
+<p>Manage and supervise Prove Talentbridge.</p>
+
+<div class="stats-grid">
+<article class="stat-card"><h3 id="submissionCount">0</h3><p>Work submissions</p></article>
+<article class="stat-card"><h3 id="paymentCount">0</h3><p>Payment and payout requests</p></article>
+</div>
+
+<p id="adminPaymentStatus" role="status"></p>
+<section id="adminPaymentsPanel" class="payment-card" hidden>
+  <h2>Payment verification</h2>
+  <h3>New receipt notifications</h3>
+  <div id="adminPaymentNotices" aria-live="polite"></div>
+  <h3>Awaiting review</h3>
+  <div id="adminPaymentQueue" aria-live="polite"></div>
+  <h3>Confirmed receipts</h3>
+  <div id="adminConfirmedPayments" aria-live="polite"></div>
+  <h3>Manual payout requests</h3>
+  <div id="adminPayoutQueue" aria-live="polite"></div>
+</section>
+
+<div class="feature-grid">
+<article class="feature-card">
+<h3>Work Verification</h3>
+<a href="admin-verification.html">Review Submissions</a>
+</article>
+
+<article class="feature-card">
+<h3>Staff Management</h3>
+<a href="staff-management.html">Manage Staff</a>
+</article>
+
+<article class="feature-card">
+<h3>Payments</h3>
+<a href="#adminPaymentsPanel">Verify Receipts</a>
+</article>
+
+<article class="feature-card">
+<h3>Payout Requests</h3>
+<a href="#adminPaymentsPanel">View Manual Payouts</a>
+</article>
+
+<article class="feature-card">
+<h3>Disputes</h3>
+<a href="disputes.html">Manage Disputes</a>
+</article>
+
+<article class="feature-card">
+<h3>Notifications</h3>
+<a href="notifications.html">View Notifications</a>
+</article>
+
+<article class="feature-card">
+<h3>Support</h3>
+<a href="support.html">Support Centre</a>
+</article>
+</div>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/payments.js"></script>
+</body>
+</html>

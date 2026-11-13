@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <h1>Create Your Account</h1>
+  <form id="ptbRegistration">
+    <label for="registerUsername">Username</label>
+    <input type="text" id="registerUsername" name="username" minlength="2" maxlength="60" autocomplete="name" required>
+    <label for="registerEmail">Email Address</label>
+    <input type="email" id="registerEmail" name="email" autocomplete="email" required>
+    <label for="registerPassword">Password</label>
+    <input type="password" id="registerPassword" name="password" minlength="8" autocomplete="new-password" required>
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" autocomplete="new-password" required>
+    <label for="accountType">Account Type</label>
+    <select id="accountType" name="accountType" required>
+      <option value="">Choose Account Type</option>
+      <option value="client">Client</option>
+      <option value="professional">Professional</option>
+    </select>
+    <div id="occupationSection">
+      <label for="specificOccupation">Your Occupation</label>
+      <select id="specificOccupation" name="occupation">
+        <option value="">Choose Your Occupation</option>
+        <option>Graphic Designer</option>
+        <option>Video Editor</option>
+        <option>Photo Editor</option>
+        <option>Frontend Developer</option>
+        <option>Backend Developer</option>
+        <option>Full Stack Developer</option>
+        <option>Content Writer</option>
+        <option>Digital Marketer</option>
+        <option>Virtual Assistant</option>
+        <option>Business Consultant</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <label>
+      <input type="checkbox" id="acceptTerms" required>
+      I agree to the <a href="terms.html">Terms</a> and
+      <a href="privacy.html">Privacy Policy</a>.
+    </label>
+    <button type="submit">Create Account</button>
+    <p id="registrationMessage" role="status"></p>
+  </form>
+  <p>Already registered? <a href="login.html">Login</a></p>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

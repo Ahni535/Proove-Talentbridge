@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Management | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <h1>Staff Management</h1>
+  <p>Only the Super Admin should be able to manage staff access.</p>
+  <form id="staffManagementForm">
+    <label for="staffEmail">Staff Email Address</label>
+    <input type="email" id="staffEmail" name="email" required>
+    <label for="staffDuty">Assigned Duty</label>
+    <select id="staffDuty" name="duty" required>
+      <option value="">Choose Duty</option>
+      <option value="verification">Work Verification</option>
+      <option value="payments">Payment Review</option>
+      <option value="disputes">Dispute Review</option>
+      <option value="support">Customer Support</option>
+    </select>
+    <label>
+      <input type="checkbox" id="staffCanApprovePayments" name="canApprovePayments">
+      Allow Payment Approval
+    </label>
+    <button type="submit">Assign Staff</button>
+    <p id="staffManagementMessage" role="status"></p>
+  </form>
+  <h2>Current Staff</h2>
+  <div id="staffList">Staff records will appear here.</div>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work Verification | Prove Talentbridge</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">PROVE <span>TALENTBRIDGE</span></a>
+<a href="admin.html">Admin Dashboard</a>
+</header>
+
+<main class="section">
+<span class="eyebrow">QUALITY CONTROL</span>
+<h1>Work Verification</h1>
+<p>Review work submitted by professionals.</p>
+
+<div class="feature-card">
+<h2>Verification Rules</h2>
+<p>Assigned staff have three days to review submissions.</p>
+<p>Staff can approve work or request corrections.</p>
+<p>If no action is taken within three days, the administrator should be notified.</p>
+</div>
+
+<h2>Pending Submissions</h2>
+<div id="verificationQueue" aria-live="polite">
+<p>Submitted work will appear here after database integration.</p>
+</div>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/verification.js"></script>
+</body>
+</html>

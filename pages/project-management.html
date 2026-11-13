@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <h1>Project Management</h1>
+  <p>Track your project progress and delivery information.</p>
+  <section>
+    <h2>Active Projects</h2>
+    <div id="activeProjects">Your active projects will appear here.</div>
+  </section>
+  <section>
+    <h2>Completed Projects</h2>
+    <div id="completedProjects">Your completed projects will appear here.</div>
+  </section>
+  <section>
+    <h2>Project Delivery</h2>
+    <form id="projectDeliveryForm">
+      <label for="deliveryProjectReference">Project Reference</label>
+      <input type="text" id="deliveryProjectReference" name="projectReference" required>
+      <label for="deliveryMessage">Delivery Message</label>
+      <textarea id="deliveryMessage" name="message" required></textarea>
+      <label for="deliveryFileLink">Work File or Portfolio Link</label>
+      <input type="url" id="deliveryFileLink" name="fileLink">
+      <button type="submit">Submit Project Delivery</button>
+      <p id="deliveryStatus" role="status"></p>
+    </form>
+  </section>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/jobs.js"></script>
+</body>
+</html>

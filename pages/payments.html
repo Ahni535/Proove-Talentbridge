@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Payments | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <span class="eyebrow">MANUAL BANK TRANSFER</span>
+  <h1>Project Payment</h1>
+  <p>Start a project payment request. Bank details appear only after you select “Proceed to Payment”.</p>
+  <p id="paymentAuthStatus" class="alert alert-warning" role="status">Sign in with your client account to start a payment.</p>
+
+  <section id="paymentSetup" class="payment-card">
+    <h2>Payment details</h2>
+    <form id="paymentSetupForm">
+      <input type="hidden" name="purpose" value="project_payment">
+      <input type="hidden" name="plan" value="">
+      <div id="projectPaymentFields">
+        <label for="paymentProjectReference">Project Reference</label>
+        <input type="text" id="paymentProjectReference" name="project_reference" required>
+        <label for="paymentAmount">Amount to Pay (₦)</label>
+        <input type="number" id="paymentAmount" name="amount_ngn" min="1" step="1" required>
+      </div>
+      <p id="planSummary" hidden></p>
+      <button type="submit" id="proceedToPayment">Proceed to Payment</button>
+      <p id="paymentSetupMessage" role="status"></p>
+    </form>
+  </section>
+
+  <section id="paymentDetails" class="payment-card" hidden>
+    <h2>Transfer to Prove Talentbridge</h2>
+    <p>Use the exact narration shown below so Admin can match your transfer.</p>
+    <dl class="bank-details">
+      <div><dt>Bank</dt><dd id="paymentBankName"></dd></div>
+      <div><dt>Account number</dt><dd id="paymentAccountNumber"></dd></div>
+      <div><dt>Account name</dt><dd id="paymentAccountName"></dd></div>
+      <div><dt>Transfer narration</dt><dd id="paymentNarration"></dd></div>
+      <div><dt>Amount</dt><dd id="paymentAmountDisplay"></dd></div>
+    </dl>
+    <form id="paymentConfirmationForm">
+      <label for="paymentReference">Bank transfer reference (optional)</label>
+      <input type="text" id="paymentReference" name="payment_reference" maxlength="120">
+      <label for="paymentReceipt">Upload transfer receipt</label>
+      <input type="file" id="paymentReceipt" name="receipt" accept="image/jpeg,image/png,image/webp,application/pdf" required>
+      <small>JPG, PNG, WebP or PDF, up to 5 MB. Your receipt is private and shared only with you and Admin.</small>
+      <button type="submit">Send Receipt for Admin Verification</button>
+      <p id="paymentConfirmationMessage" role="status"></p>
+    </form>
+    <button type="button" class="btn-light" id="backToPaymentSetup">Change payment details</button>
+  </section>
+
+  <section class="section">
+    <h2>Payment history</h2>
+    <div id="paymentHistory" aria-live="polite">Your payment records will appear here after sign in.</div>
+  </section>
+  <p class="alert alert-warning">Payments, payouts and refunds are manually reviewed. This site does not initiate transfers, releases or refunds.</p>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/payments.js"></script>
+</body>
+</html>

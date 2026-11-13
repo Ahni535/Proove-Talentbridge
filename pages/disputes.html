@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disputes | Prove Talentbridge</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">PROVE <span>TALENTBRIDGE</span></a>
+<a href="dashboard.html">Dashboard</a>
+</header>
+
+<main class="section">
+<span class="eyebrow">RESOLUTION CENTRE</span>
+<h1>Disputes</h1>
+<p>Report and resolve disagreements about projects and payments.</p>
+
+<form id="disputeForm">
+<label for="disputeType">Dispute Type</label>
+<select id="disputeType" name="type" required>
+<option value="">Choose dispute type</option>
+<option>Incomplete Work</option>
+<option>Late Delivery</option>
+<option>Payment Issue</option>
+<option>Incorrect Deliverables</option>
+<option>Other</option>
+</select>
+
+<label for="projectReference">Project Reference</label>
+<input id="projectReference" name="projectReference" type="text" required>
+
+<label for="disputeDetails">Explain the Issue</label>
+<textarea id="disputeDetails" name="details" rows="6" required></textarea>
+
+<button type="submit">Submit Dispute</button>
+<p id="disputeMessage" role="status"></p>
+</form>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

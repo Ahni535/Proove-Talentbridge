@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payout Requests | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <h1>Payout Requests</h1>
+  <p>Submit a manual payout request for an eligible completed project. Payouts are not sent automatically.</p>
+  <p id="payoutAuthStatus" class="alert alert-warning" role="status">Sign in to submit a payout request.</p>
+  <form id="payoutRequestForm">
+    <label for="payoutProjectReference">Project Reference</label>
+    <input type="text" id="payoutProjectReference" name="projectReference" required>
+    <label for="payoutAmount">Amount Requested (₦)</label>
+    <input type="number" id="payoutAmount" name="amount" min="1" required>
+    <label for="payoutBankName">Bank Name</label>
+    <input type="text" id="payoutBankName" name="bankName" required>
+    <label for="payoutAccountNumber">Account Number</label>
+    <input type="text" id="payoutAccountNumber" name="accountNumber" required>
+    <label for="payoutAccountName">Account Name</label>
+    <input type="text" id="payoutAccountName" name="accountName" required>
+    <button type="submit">Submit Payout Request</button>
+    <p id="payoutRequestMessage" role="status"></p>
+  </form>
+  <h2>My Requests</h2>
+  <div id="payoutRequestHistory">Your payout requests will appear here.</div>
+  <p class="alert alert-warning">Payouts and refunds are handled manually by authorised staff. Never send your password or card details.</p>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/payments.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <h2>PROVE <span>TALENTBRIDGE</span></h2>
+  <nav><a href="client-dashboard.html">Dashboard</a> <a href="marketplace.html">Marketplace</a></nav>
+</header>
+<main class="container">
+  <h1>Post a Job</h1>
+  <p>Describe the service you need and find the right professional.</p>
+  <form id="jobPostingForm">
+    <label for="jobTitle">Job Title</label>
+    <input type="text" id="jobTitle" name="title" required>
+    <label for="jobCategory">Professional Category</label>
+    <select id="jobCategory" name="category" required>
+      <option value="">Choose a category</option>
+      <option>Design</option><option>Video Editing</option>
+      <option>Photo Editing</option><option>Writing</option>
+      <option>Technology</option><option>Marketing</option>
+      <option>Business</option><option>Virtual Assistance</option>
+    </select>
+    <label for="jobDescription">Job Description</label>
+    <textarea id="jobDescription" name="description" required></textarea>
+    <label for="jobBudget">Budget (₦)</label>
+    <input type="number" id="jobBudget" name="budget" min="1" required>
+    <label for="jobDeadline">Expected Deadline</label>
+    <input type="date" id="jobDeadline" name="deadline" required>
+    <button type="submit">Publish Job</button>
+    <p id="jobPostingMessage" role="status"></p>
+  </form>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/jobs.js"></script>
+</body>
+</html>

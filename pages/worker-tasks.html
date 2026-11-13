@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Tasks | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <h1>My Assigned Tasks</h1>
+  <p>Complete your assigned professional tasks and submit your work for verification.</p>
+  <section>
+    <h2>Available Tasks</h2>
+    <div id="availableWorkerTasks">Your assigned tasks will appear here.</div>
+  </section>
+  <section>
+    <h2>Submit Completed Work</h2>
+    <form id="taskSubmissionForm">
+      <label for="taskReference">Task Reference</label>
+      <input type="text" id="taskReference" name="taskReference" required>
+      <label for="taskDescription">Work Description</label>
+      <textarea id="taskDescription" name="description" required></textarea>
+      <label for="taskFileLink">Work File or Portfolio Link</label>
+      <input type="url" id="taskFileLink" name="fileLink" required>
+      <button type="submit">Submit for Verification</button>
+      <p id="taskSubmissionMessage" role="status"></p>
+    </form>
+  </section>
+  <section>
+    <h2>Submission History</h2>
+    <div id="submissionHistory">Your submitted work and review status will appear here.</div>
+  </section>
+  <a href="professional-dashboard.html">Back to Professional Dashboard</a>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/jobs.js"></script>
+<script src="../js/notifications.js"></script>
+</body>
+</html>

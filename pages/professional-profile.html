@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Profile | Prove Talentbridge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h2>PROVE <span>TALENTBRIDGE</span></h2></header>
+<main class="container">
+  <h1>My Professional Profile</h1>
+  <form id="professionalProfileForm">
+    <label for="profileUsername">Professional Username</label>
+    <input type="text" id="profileUsername" name="username" required>
+    <label for="profileOccupation">Occupation</label>
+    <input type="text" id="profileOccupation" name="occupation" required>
+    <label for="profileBio">Professional Bio</label>
+    <textarea id="profileBio" name="bio" required></textarea>
+    <label for="profileServices">Services</label>
+    <textarea id="profileServices" name="services"></textarea>
+    <label for="profileSkills">Skills</label>
+    <textarea id="profileSkills" name="skills"></textarea>
+    <label for="profilePortfolio">Portfolio Link</label>
+    <input type="url" id="profilePortfolio" name="portfolio">
+    <button type="submit">Save Profile</button>
+    <p id="profileMessage" role="status"></p>
+  </form>
+  <h2>Verified Work</h2>
+  <div id="verifiedWorkList">Approved work will appear here.</div>
+  <a href="professional-dashboard.html">Back to Dashboard</a>
+</main>
+<script src="../js/supabase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
